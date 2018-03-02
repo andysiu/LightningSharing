@@ -13,6 +13,7 @@
 				var rs = JSON.parse(a.getReturnValue());
 				component.set("v.recordName", rs.recordName);
 				component.set("v.sObjectName", rs.objectType);
+				component.set("v.canEdit", rs.canEdit);
 
 			} else if (state === "ERROR") {
 				let appEvent = $A.get("e.c:handleCallbackError");
